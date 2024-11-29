@@ -29,31 +29,3 @@ mainBtn.addEventListener("click", () => {
     document.getElementsByClassName("Main")[0].style.display = "block";
 });
 
-// Создаём базу данных SQLite
-dbBtn.addEventListener("click", async () => {
-    try {
-        // Данные для создания файла
-        const dbContent = `
-            CREATE TABLE IF NOT EXISTS users (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                username TEXT NOT NULL,
-                chat_id INTEGER NOT NULL
-            );
-        `;
-                // Создание Blob для файла SQLite
-                const blob = new Blob([dbContent], { type: "text/plain" });
-                const dbFile = URL.createObjectURL(blob);
-        
-                // Создаём ссылку для скачивания
-                const a = document.createElement("a");
-                a.href = dbFile;
-                a.download = "database.sql";
-                document.body.appendChild(a);
-                a.click();
-                        // Уведомляем пользователя
-        alert("Файл базы данных создан и загружен!");
-    } catch (error) {
-        console.error("Ошибка при создании базы данных:", error);
-        alert("Произошла ошибка при создании базы данных.");
-    }
-});

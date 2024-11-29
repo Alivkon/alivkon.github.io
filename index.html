@@ -9,7 +9,7 @@
 <body>
     <div class="Main">
         <h1>Тестовое приложение</h1>
-        <img src="{{ url_for('static', filename='bot.jpg') }}" alt="">
+        <img src="static/bot.jpg" alt="">
         <p></p>
         <button class="btn f-btn">Тест отправки данных</button>
     </div>
@@ -33,3 +33,13 @@
     </script>
 </body>
 </html>
+<button class="btn u-btn">Показать имя пользователя</button>
+
+<script>
+    let uBtn = document.getElementsByClassName("u-btn")[0];
+
+    uBtn.addEventListener("click", () => {
+        let username = tg.initDataUnsafe.user.username;
+        alert(`Username: ${username}`);
+    });
+</script>

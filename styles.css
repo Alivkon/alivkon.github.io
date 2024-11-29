@@ -38,3 +38,12 @@ img {
     color: var(--tg-theme-button-text-color);
     background: var(--tg-theme-button-color);
 }
+button:active {
+    background-color: #003f7f;
+}
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}

@@ -11,7 +11,11 @@
         <h1>Тестовое приложение</h1>
         <img src="static/bot.jpg" alt="Bot Image">
         <p>Нажмите кнопку для тестирования функций</p>
-        <button class="btn f-btn">Тест отправки данных</button>
+        <div class="button-container">
+            <button class="btn f-btn">Тест отправки данных</button>
+            <button class="btn u-btn">Показать имя пользователя</button>
+            <button class="btn s-btn">Закрыть окно</button>
+        </div>
     </div>
 
     <!-- Новая форма для отображения -->
@@ -21,41 +25,7 @@
         <button class="btn main-btn">Вернуться на главный экран</button>
     </div>
 
-    <button class="btn u-btn">Показать имя пользователя</button>
-    <button class="btn s-btn">Закрыть окно</button>
-
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-
-    <script>
-        let tg = window.Telegram.WebApp;
-
-        let fBtn = document.getElementsByClassName("f-btn")[0];
-        let sBtn = document.getElementsByClassName("s-btn")[0];
-        let uBtn = document.getElementsByClassName("u-btn")[0];
-        let mainBtn = document.getElementsByClassName("main-btn")[0];
-
-        // Скрываем главный экран и показываем форму
-        fBtn.addEventListener("click", () => {
-            document.getElementsByClassName("Main")[0].style.display = "none";
-            document.getElementsByClassName("test-form")[0].style.display = "block";
-        });
-
-        // Закрываем WebApp
-        sBtn.addEventListener("click", () => {
-            tg.close();
-        });
-
-        // Показываем имя пользователя
-        uBtn.addEventListener("click", () => {
-            let username = tg.initDataUnsafe.user?.username || "Неизвестный пользователь";
-            alert(`Username: ${username}`);
-        });
-
-        // Возвращаемся на главный экран
-        mainBtn.addEventListener("click", () => {
-            document.getElementsByClassName("test-form")[0].style.display = "none";
-            document.getElementsByClassName("Main")[0].style.display = "block";
-        });
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>

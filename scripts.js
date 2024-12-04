@@ -27,7 +27,8 @@ uBtn.addEventListener("click", () => {
 });
 
 tBtn.addEventListener("click", () => {
-    let platform = tg.initDataUnsafe.platform || "Неизвестный пользователь";
+//    let platform = tg.initDataUnsafe.platform || "Неизвестный пользователь";
+    let platform = tg.initDataUnsafe?.platform || "Неизвестная платформа";
     alert(`Платфома: ${platform}`);
 });
 

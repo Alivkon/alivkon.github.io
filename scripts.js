@@ -19,8 +19,10 @@ sBtn.addEventListener("click", () => {
 
 // Показываем имя пользователя
 uBtn.addEventListener("click", () => {
-    let username = tg.initDataUnsafe.user?.username || "Неизвестный пользователь";
-    alert(`Username: ${username}`);
+ //   let username = tg.initDataUnsafe.user?.username || "Неизвестный пользователь";
+ //   alert(`Username: ${username}`);
+    let chatId = tg.initDataUnsafe?.user?.id || 'ID чата недоступен';
+    alert(`Chat ID: ${chatId}`);
 });
 
 // Возвращаемся на главный экран

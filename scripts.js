@@ -1,19 +1,19 @@
 let tg = window.Telegram.WebApp;
 
-//let fBtn = document.getElementsByClassName("f-btn")[0];
+let fBtn = document.getElementsByClassName("f-btn")[0];
 let sBtn = document.getElementsByClassName("s-btn")[0];
 let uBtn = document.getElementsByClassName("u-btn")[0];
-//let mainBtn = document.getElementsByClassName("main-btn")[0];
+let mainBtn = document.getElementsByClassName("main-btn")[0];
 let dbBtn = document.getElementsByClassName("db-btn")[0];
 let MainButton = tg.MainButton;
 let BottomButton=tg.BottomButton;
 let BottomButtonClicked=tg.BottomButtonClicked;
 
-// Скрываем главный экран и показываем форму
-// fBtn.addEventListener("click", () => {
-//     document.getElementsByClassName("Main")[0].style.display = "none";
-//     document.getElementsByClassName("test-form")[0].style.display = "block";
-// });
+//Скрываем главный экран и показываем форму
+fBtn.addEventListener("click", () => {
+    document.getElementsByClassName("Main")[0].style.display = "none";
+     document.getElementsByClassName("test-form")[0].style.display = "block";
+ });
 
 MainButton.show();
 BottomButton.show();

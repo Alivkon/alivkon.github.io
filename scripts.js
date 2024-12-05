@@ -1,6 +1,6 @@
 let tg = window.Telegram.WebApp;
 
-let fBtn = document.getElementsByClassName("f-btn")[0];
+//let fBtn = document.getElementsByClassName("f-btn")[0];
 let sBtn = document.getElementsByClassName("s-btn")[0];
 let uBtn = document.getElementsByClassName("u-btn")[0];
 //let mainBtn = document.getElementsByClassName("main-btn")[0];

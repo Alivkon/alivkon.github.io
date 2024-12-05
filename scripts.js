@@ -5,9 +5,9 @@ let sBtn = document.getElementsByClassName("s-btn")[0];
 let uBtn = document.getElementsByClassName("u-btn")[0];
 //let mainBtn = document.getElementsByClassName("main-btn")[0];
 let dbBtn = document.getElementsByClassName("db-btn")[0];
-let MainButton = WebApp.MainButton;
-let BottomButton=WebApp.BottomButton;
-let BottomButtonClicked=WebApp.BottomButtonClicked;
+let MainButton = tg.MainButton;
+let BottomButton=tg.BottomButton;
+let BottomButtonClicked=tg.BottomButtonClicked;
 
 // Скрываем главный экран и показываем форму
 // fBtn.addEventListener("click", () => {

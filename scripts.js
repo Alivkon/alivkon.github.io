@@ -8,6 +8,7 @@ let dbBtn = document.getElementsByClassName("db-btn")[0];
 let MainButton = tg.MainButton;
 let BottomButton=tg.BottomButton;
 let BottomButtonClicked=tg.BottomButtonClicked;
+let secondaryButtonClicked = tg.secondaryButtonClicked;
 
 //Скрываем главный экран и показываем форму
 fBtn.addEventListener("click", () => {
@@ -20,9 +21,8 @@ BottomButton.show();
 
 BottomButton.setText("BottomButton");
 BottomButtonClicked.onClicked(() => {
-    handleChargingStationsListWOReg(bot, msg) ;
+    handleChargingStationsListWOReg;
 });
-
 
 // Закрываем WebApp
 sBtn.addEventListener("click", () => {
@@ -51,4 +51,6 @@ mainBtn.addEventListener("click", () => {
     document.getElementsByClassName("Main")[0].style.display = "block";
 });
 
-secondaryButtonClicked
+tg.secondaryButtonClicked(() => {
+    alert("Secondary button clicked");
+};

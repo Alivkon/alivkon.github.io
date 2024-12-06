@@ -53,4 +53,4 @@ mainBtn.addEventListener("click", () => {
 
 tg.secondaryButtonClicked(() => {
     alert("Secondary button clicked");
-};
+});

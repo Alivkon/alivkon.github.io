@@ -3,6 +3,7 @@ let tg = window.Telegram.WebApp;
 let fBtn = document.getElementsByClassName("f-btn")[0];
 let sBtn = document.getElementsByClassName("s-btn")[0];
 let uBtn = document.getElementsByClassName("u-btn")[0];
+let tBtn = document.getElementsByClassName("t-btn")[0];
 let mainBtn = document.getElementsByClassName("main-btn")[0];
 let dbBtn = document.getElementsByClassName("db-btn")[0];
 let MainButton = tg.MainButton;
@@ -20,8 +21,8 @@ MainButton.show();
 BottomButton.show();
 
 BottomButton.setText("BottomButton");
-BottomButtonClicked.onClicked(() => {
-    handleChargingStationsListWOReg;
+BottomButton.onClicked(() => {
+    handleChargingStationsListWOReg();
 });
 
 // Закрываем WebApp
@@ -51,6 +52,6 @@ mainBtn.addEventListener("click", () => {
     document.getElementsByClassName("Main")[0].style.display = "block";
 });
 
-tg.secondaryButtonClicked(() => {
+secondaryButtonClicked(() => {
     alert("Secondary button clicked");
 });
